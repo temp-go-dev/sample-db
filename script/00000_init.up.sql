@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `sampledb`.`todo` (
   `status` INT NOT NULL DEFAULT 0 COMMENT '0:create 1:doing 2:done',
   `version` INT NOT NULL DEFAULT 0 COMMENT 'バージョン',
   PRIMARY KEY (`id`),
-  INDEX `fk_todo_2_idx` (`user_id` ASC) VISIBLE,
+  -- INDEX `fk_todo_2_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `fk_todo`
     FOREIGN KEY (`user_id`)
     REFERENCES `sampledb`.`user` (`id`)
