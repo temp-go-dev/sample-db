@@ -1,6 +1,25 @@
 # sample-db
 サンプルアプリ用のRDB（MySQL）  
 
+## 構成
+
+```
+sample-db
+  |-- localhost  // ローカルDBをDockerで立ち上げるセット
+  |      |-- mysql
+  |      |     |-- dbinit.sql
+  |      |     |-- Dockerfile
+  |      |     `-- my.cnf
+  |      `-- docker-compose.yaml
+  |
+  |-- model
+  |      `-- sampmledb.mwb // 設計Model
+  |-- script
+  |      |-- 00000_init.up.sql
+  |      |-- 00000_init.down.sql  
+  |      |-- ...
+```
+
 ## ローカル開発用RDB起動
 
 - 前提
